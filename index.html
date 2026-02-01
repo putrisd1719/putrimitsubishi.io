@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi Fuso | Putri Santi Dewi - Strategic Fleet Solution</title>
+    <style>
+        :root { --red: #e31837; --dark: #0a0a0a; --card: #151515; --white: #ffffff; --gray: #a0a0a0; }
+  
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+    /* Gradasi Elegan: Hitam ke Abu-abu Gelap khas Mitsubishi */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+    background-attachment: fixed;
+    
+    color: var(--white);
+    overflow-x: hidden;
+    overflow-y: auto; /* Pastikan scroll aktif */
+}
+
+/* Tambahkan sedikit tekstur halus agar tidak polos banget */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com');
+    opacity: 0.1; /* Tekstur karbon tipis biar kesan otomotifnya kuat */
+    z-index: -1;
+    pointer-events: none;
+}
+
+<style>
+    :root { --red: #e31837; --dark: #0a0a0a; --card: #151515; --white: #ffffff; --gray: #a0a0a0; }
+
+.testi-gallery {
+    display: grid;
+    /* Ini akan otomatis bikin kolom sebanyak mungkin yang muat */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.testi-item {
+    width: 100%;
+    height: 250px; /* Ukuran kotak foto seragam */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: 0.3s ease;
+}
+
+.testi-item:hover {
+    border-color: var(--red);
+    transform: scale(1.03);
+    z-index: 2;
+}
+
+.testi-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Foto tidak penyok */
+}
+
+/* Biar di HP jadi 2 kolom sejajar (lebih hemat tempat) */
+@media (max-width: 480px) {
+    .testi-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .testi-item { height: 180px; }
+}
+</style>
+
+        <style>
+    /* Taruh di sini, di bawah :root atau di atas .hero */
+    .testi-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+   /* Pakai Flex saja supaya tidak mengganggu sistem Grid Truk */
+.testi-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testi-card {
+    background: var(--card);
+    width: 300px; /* Ukuran kartu testimoni dibatasi */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #222;
+}
+
+.testi-card img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--red);
+}
+
+        .hero {
+    /* Kita buat tingginya otomatis supaya muat dua foto tanpa sesak */
+    min-height: 60vh; 
+    height: auto; 
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), var(--dark)), url('8.-Slider-Canter-PC.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 3px solid var(--red);
+}
+
+.container { 
+    max-width: 1300px; 
+    /* UBAH margin-top jadi 50px (POSITIF). Hapus tanda minusnya! */
+    margin: 50px auto 50px; 
+    padding: 0 20px; 
+    position: relative;
+    z-index: 1;
+}
+
+/* Pastikan Grid Truk tetap berbaris rapi */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); 
+    gap: 30px; 
+}
+
+
+
+/* Khusus layar HP kecil */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* Paksa 1 kolom saja */
+    }
+    .container {
+        margin-top: -30px; /* Biar kartu naik sedikit ke area hero */
+    }
+}
+
+        .card { background: var(--card); border-radius: 4px; border: 1px solid #222; transition: 0.4s ease; overflow: hidden; display: flex; flex-direction: column; }
+        .card:hover { border-color: var(--red); transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.7); }
+        .card-img { width: 100%; height: 240px; background: #111; overflow: hidden; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; filter: contrast(1.1); }
+        
+        .card-info { padding: 30px; flex-grow: 1; }
+        .card-info h3 { font-size: 1.5rem; margin: 0 0 15px 0; font-weight: 800; border-left: 5px solid var(--red); padding-left: 15px; line-height: 1.3; color: var(--white); }
+
+        .spec-table { width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+        .spec-table td { padding: 12px 0; border-bottom: 1px solid #252525; font-size: 0.85rem; }
+        .spec-table td:first-child { color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+        .spec-table td:last-child { text-align: right; font-weight: 700; color: var(--white); }
+
+        .btn-buy {
+            display: block; width: 100%; padding: 18px; background: var(--red); color: white; text-align: center; 
+            text-decoration: none; font-weight: 800; border-radius: 2px; transition: 0.3s; box-sizing: border-box; 
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;
+        }
+
+        .map-section { margin: 80px 0; text-align: center; }
+        .map-container { width: 100%; height: 450px; border: 1px solid #333; filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+
+       .wa-float {
+    position: fixed;
+    bottom: 30px; /* Jarak dari bawah */
+    right: px;  /* Jarak dari kanan */
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 10000; /* Angka tinggi supaya tidak tertutup foto/kartu */
+    text-decoration: none;
+}
+
+/* Tambahkan ini supaya ada icon telepon putih di tengah tombol */
+.wa-float:after {
+    content: "📞"; 
+    font-size: 25px;
+}
+        .footer { padding: 80px 20px; text-align: center; background: #050505; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+<body> <!-- Cari tulisan ini -->
+
+    <!-- INI BAGIAN ATAS (FOTO & NAMA) -->
+    <div class="hero" style="text-align: center; padding: 60px 20px; background: #0a0a0a; border-bottom: 3px solid #e31837;">
+        <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+            <div class="profile-photo"><img src="wajah.jpg" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #e31837;"></div>
+            <div class="profile-photo mama"><img src="mama.jpg" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid gold;"></div>
+        </div>
+        <h1 style="margin: 0; font-size: 2.5rem; color: white;">PUTRI SANTI DEWI</h1>
+        <p style="color: #e31837; letter-spacing: 3px; font-weight: bold;">Strategic Fleet & Business Consultant</p>
+    </div>
+
+    <!-- INI FITUR SEARCH BESAR (AGAR TIDAK BERTABRAKAN) -->
+    
+    <!-- BARU LANJUT KE DAFTAR TRUK KAMU DI BAWAH SINI -->
+    <div class="container">
+
+<div class="company-section" style="display: flex; gap: 40px; align-items: center; background: var(--card); padding: 40px; border-radius: 12px; border: 1px solid #333; flex-wrap: wrap;">
+    
+    <!-- BOX FOTO MAMA -->
+    <div class="company-img" style="flex: 0.6; min-width: 300px; border: 3px solid var(--red); border-radius: 15px; overflow: hidden; height: 550px; background: #000;">
+        <!-- GANTI NAMA FILE FOTO MAMA DISINI -->
+        <img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 19.48.59.jpeg" style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+    </div>
+
+    <!-- BOX TEKS -->
+    <div class="company-text" style="flex: 1; min-width: 300px;">
+        <h3 style="color: var(--red); font-size: 2rem; margin-bottom: 20px; border-left: 5px solid var(--red); padding-left: 15px;">Dukungan & Inspirasi</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--gray);">
+            "Dibalik setiap unit Mitsubishi Fuso yang kami hantarkan, ada doa dan nilai-nilai keluarga yang selalu kami pegang teguh."
+        </p>
+        <p style="line-height: 1.8; color: var(--white);">
+            Konsultasikan kebutuhan armada bisnis Anda bersama <strong>Putri Santi Dewi</strong> untuk solusi fleet yang lebih personal dan profesional.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+           <div class="grid">
+        <!-- === KELOMPOK 1: LIGHT TRUCK (CANTER SERIES) === -->
+        
+        <!-- CANTER FE 74 HD -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\tumblr_78e6f9c48ae82b9dadbbab0b7b13cc54_bab7422f_1280.jpg"></div>
+            <div class="card-info">
+                <h3>CANTER FE 74 HD (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Tenaga</td><td>136 PS</td></tr>
+                    <tr><td>Final Gear</td><td>6.333</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 556.500.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20saya%20mau%20tanya%20CANTER%20FE%2074%20HD%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- CANTER FE 75 SHDX -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\Mitsubishi-Fuso-Canter-FE-SHDX-1.webp"></div>
+            <div class="card-info">
+                <h3>CANTER FE 75 SHDX (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Final Gear</td><td>6.666 (Si Jago Tanjakan)</td></tr>
+                    <tr><td>Torsi</td><td>430 NM</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 574.000.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20saya%20mau%20tanya%20CANTER%20FE%2075%20SHDX%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- CANTER FE 71 N -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\tumblr_1c5eb74f5a4a9a9409e4fbf25e196e38_a34eaa20_1280.jpg"></div>
+            <div class="card-info">
+                <h3>CANTER FE 71 N (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Radius Putar</td><td>5.1 Meter (Lincah)</td></tr>
+                    <tr><td>Tipe</td><td>4 Roda</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 467.500.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20saya%20mau%20tanya%20CANTER%20FE%2071%20N%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- === KELOMPOK 2: MEDIUM TRUCK & BUS (FIGHTER X SERIES) === -->
+
+        <!-- FIGHTER X FN 62 F HD -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\tumblr_c026501056bfa86622e9124f491e13a7_fb1772d6_1280.jpg"></div>
+            <div class="card-info">
+                <h3>FN 62 F HD (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Drive System</td><td>6x4 (Dual Drive)</td></tr>
+                    <tr><td>Tenaga</td><td>270 PS</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 1.489.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20saya%20mau%20tanya%20FIGHTER%20X%20FN%2062%20F%20HD%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- FIGHTER X FN 61 FS -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\6_Banner-Slide-FM61-FS-revisiedsticker.png"></div>
+            <div class="card-info">
+                <h3>FN 61 FS (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Panjang Unit</td><td>9.845 MM (Volume Max)</td></tr>
+                    <tr><td>Drive System</td><td>6x2</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 1.223.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20saya%20mau%20tanya%20FIGHTER%20X%20FN%2061%20FS%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- FE 71L BC N BUS -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\1.webp"></div>
+            <div class="card-info">
+                <h3>FE 71L BC N (EURO 4) BUS</h3>
+                <table class="spec-table">
+                    <tr><td>Chassis</td><td>Long Bus Chassis</td></tr>
+                    <tr><td>Sistem</td><td>Common Rail Technology</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 722.500.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20saya%20mau%20tanya%20FIGHTER%20X%20FE%2071L%20BC%20N%20EURO%204%20BUS" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- === KELOMPOK 3: PICKUP & 4x4 SERIES === -->
+
+        <!-- L300 PICK-UP -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\uvikx1yklomzah3t8zofzafpjb9znbfblfwbivbl-optimized.jpg"></div>
+            <div class="card-info">
+                <h3>L300 PICK-UP (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Panjang Bak</td><td>2.430 MM</td></tr>
+                    <tr><td>Torsi</td><td>200 NM</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 273.500.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya%20L300%20PICK-UP%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- TRITON ULTIMATE -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\1721149335-1720612439-triton-banner-desktoppngpng-ezgif.com-png-to-webp-converter.jpg"></div>
+            <div class="card-info">
+                <h3>TRITON ULTIMATE 4x4 (AT)</h3>
+                <table class="spec-table">
+                    <tr><td>Drive Mode</td><td>Super Select 4WD-II</td></tr>
+                    <tr><td>Safety</td><td>7 Airbags & FCM</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 645.000.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya%20TRITON%20ULTIMATE%204*4" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- TRITON SC HDX -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\titan_single_cab_1440x800.jpg"></div>
+            <div class="card-info">
+                <h3>TRITON SC HDX 4x4 (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Ground Clearance</td><td>222 MM</td></tr>
+                    <tr><td>Sistem</td><td>4WD High/Low Gear</td></tr>
+                    <tr><td>Harga OTR Medan*</td><td>Rp 471.500.000</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya%20TRITON%20SC%20HDX%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- 4. L300 (EURO 4) -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\uvikx1yklomzah3t8zofzafpjb9znbfblfwbivbl-optimized.jpg" alt="L300"></div>
+            <div class="card-info">
+                <h3>L300 PICK-UP (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Engine Code</td><td>4N14 Common Rail Turbo</td></tr>
+                    <tr><td>Cargo Length</td><td>2.430 MM (Extra Volume)</td></tr>
+                    <tr><td>Max Torque</td><td>200 NM / 1.000-3.500 RPM</td></tr>
+                    <tr><td>Efficiency</td><td>40% More Fuel Efficient</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya%20L300%20PICK-UP%20EURO%204" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- 5. NEW TRITON ULTIMATE (EURO 4) -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\1721149335-1720612439-triton-banner-desktoppngpng-ezgif.com-png-to-webp-converter.jpg" alt="Triton"></div>
+            <div class="card-info">
+                <h3>NEW TRITON ULTIMATE 4x4 (EURO 4)</h3>
+                <table class="spec-table">
+                    <tr><td>Performance</td><td>181 PS / 430 NM</td></tr>
+                    <tr><td>Transmission</td><td>6-Speed AT with Sport Mode</td></tr>
+                    <tr><td>Drive Mode</td><td>Super Select 4WD-II</td></tr>
+                    <tr><td>Safety</td><td>7-SRS Airbags & FCM System</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya%20NEW%20TRITON%20ULTIMATE%204*4" class="btn-buy">TANYA DI WHATSAPP</a>
+            </div>
+        </div>
+
+        <!-- 6. FE 71L BC N (EURO 4) BUS -->
+        <div class="card">
+            <div class="card-img"><img src="C:\Users\Admin\Downloads\1.webp" alt="FE 71L BC N"></div>
+            <div class="card-info">
+                <h3>FE 71L BC N (EURO 4) BUS</h3>
+                <table class="spec-table">
+                    <tr><td>Chassis Type</td><td>Long Bus Chassis</td></tr>
+                    <tr><td>Wheelbase</td><td>3.350 MM (Stability First)</td></tr>
+                    <tr><td>Engine Output</td><td>108 PS / 2.500 RPM</td></tr>
+                    <tr><td>Fuel System</td><td>Common Rail Technology</td></tr>
+                </table>
+                <a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya%20FE%2071L%20BC%20N%20EURO%204%20BUS" class="btn-buy">TANYA DI WHATSAPP</a>
+                                      </div>
+        </div> <!-- Penutup Card FE 71L -->
+
+    </div> <!-- Penutup Grid Produk -->
+</div> <!-- Penutup Container Produk -->
+
+<!-- MULAI AREA BARU (COMPANY PROFILE) -->
+<div class="container" style="margin-top: 100px; clear: both;">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-weight: 900; letter-spacing: 2px;">COMPANY PROFILE</h2>
+        <div style="width: 50px; height: 4px; background: var(--red); margin: 0 auto;"></div>
+    </div>
+    
+    <div class="company-content">
+        <div class="company-text">
+            <h3 style="color: var(--red);">STRATEGIC FLEET SOLUTION</h3>
+            <p>Bersama <strong>Putri Santi Dewi</strong>, kami memberikan konsultasi armada yang lebih dari sekadar menjual unit. Kami fokus pada efisiensi operasional bisnis Anda.</p>
+        </div>
+        <div class="company-img">
+             <img src="C:\Users\Admin\Downloads\kantor-fuso.jpg" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+</div>
+
+<section class="container" style="margin-top: 50px;">
+    <div class="section-title">
+        <h2>GALERI PENYERAHAN UNIT</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="testi-gallery">
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.38.44.jpg.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.31.32.jpg.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.39.18.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.36.35.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.36.21.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.35.52.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.35.25.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.33.51.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.31.04.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.30.11.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.33.05.jpeg"></div>
+        <div class="testi-item"><img src="C:\Users\Admin\Downloads\WhatsApp Image 2026-02-01 at 15.32.04.jpeg"></div>
+    </div>
+</section>
+
+<!-- BARU LANJUT KE MAP SECTION KAMU -->
+<div class="map-section">
+
+   
+ <!-- MAPS SECTION -->
+    <div class="map-section">
+        <h2 style="border-bottom: 2px solid var(--red); display: inline-block; padding-bottom: 10px; margin-bottom: 30px;">OFFICIAL DEALER LOCATION</h2>
+        <p style="color: var(--gray);">PT. Dipo Internasional Pahala Otomotif | Jl. S.M Raja Km 7 No.34, Medan</p>
+        <div class="map-container">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.216200155246!2d98.70618917400472!3d3.5375078964367654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30313a806cfddf0b%3A0xd04bb213e4be590d!2sMITSUBISHI%20DIPO%20MEDAN%20SM.RAJA!5e0!3m2!1sid!2sid!4v1769926013498!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/6282166260003?text=Halo%20Putri%20mau%20tanya" class="wa-float" target="_blank">
+    <img src="" width="35" alt="">
+</a>
+
+<div class="footer">
+    <p style="color: var(--red); font-weight: 800; letter-spacing: 5px;">MITSUBISHI FUSO | MEDAN</p>
+    <p style="font-weight: 300; opacity: 0.6;">PT. DIPO INTERNASIONAL PAHALA OTOMOTIF</p>
+</div>
+
+</body>
+</html>
