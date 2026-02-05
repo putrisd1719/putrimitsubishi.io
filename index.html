@@ -6,7 +6,103 @@
     <title>Mitsubishi Fuso | Putri Santi Dewi - Strategic Fleet Solution</title>
     <style>
         :root { --red: #e31837; --dark: #0a0a0a; --card: #151515; --white: #ffffff; --gray: #a0a0a0; }
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi Fuso | Putri Santi Dewi - Strategic Fleet Solution</title>
+    <style>
+        :root { 
+            --red: #e31837; 
+            --dark: #0a0a0a; 
+            --card: #151515; 
+            --white: #ffffff; 
+            --gray: #a0a0a0; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+            background-attachment: fixed;
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* --- STYLING BARU UNTUK FOTO PROFIL --- */
+        .profile-wrap {
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-img-top {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid var(--red);
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(227, 24, 55, 0.4);
+            background: #000;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 60vh; 
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), var(--dark)), url('8.-Slider-Canter-PC.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--red);
+        }
+
+        /* --- STYLE LAINNYA (Disederhanakan dari script Anda) --- */
+        .container { max-width: 1300px; margin: 50px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        
+        .card { background: var(--card); border-radius: 4px; border: 1px solid #222; transition: 0.4s; overflow: hidden; display: flex; flex-direction: column; }
+        .card:hover { border-color: var(--red); transform: translateY(-10px); }
+        .card-img { width: 100%; height: 240px; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .card-info { padding: 30px; }
+        .card-info h3 { border-left: 5px solid var(--red); padding-left: 15px; margin: 0 0 15px 0; }
+
+        .spec-table { width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+        .spec-table td { padding: 10px 0; border-bottom: 1px solid #252525; font-size: 0.85rem; }
+        .spec-table td:last-child { text-align: right; font-weight: 700; }
+
+        .btn-buy {
+            display: block; width: 100%; padding: 15px; background: var(--red); color: white; 
+            text-align: center; text-decoration: none; font-weight: 800; text-transform: uppercase;
+        }
+
+        .testi-gallery {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px;
+        }
+        .testi-item { height: 250px; border-radius: 8px; overflow: hidden; border: 2px solid #333; }
+        .testi-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        .wa-float {
+            position: fixed; bottom: 30px; right: 30px; background: #25d366;
+            width: 60px; height: 60px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; z-index: 1000; text-decoration: none;
+        }
+        
+        .footer { padding: 60px; text-align: center; background: #050505; border-top: 1px solid #222; }
+
+        @media (max-width: 480px) {
+            .grid { grid-template-columns: 1fr; }
+            .testi-gallery { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>  
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -452,6 +548,7 @@ body::before {
 
 </body>
 </html>
+
 
 
 
